@@ -59,7 +59,7 @@ p{
 
 .inicio{
     display: flex;
-    background: #000000;
+    background-color: #000;
     height: 100vh;
     background-size: cover;
     color: #fff;
