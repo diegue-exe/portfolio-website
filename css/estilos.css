@@ -59,7 +59,7 @@ p{
 
 .inicio{
     display: flex;
-    background: url("../img/banner.gif") no-repeat center;
+    background: #000 no-repeat center;
     height: 100vh;
     background-size: cover;
     color: #fff;
