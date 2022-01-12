@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* Estilos de la barra de navegacion */
+.barra-navegacion{
+    position:fixed; /* Para que se quede fija la barra de nav*/
+    width: 100%; /*Para que ocupe todo el espacio en horizontal */
+    padding:30px 0;
+    background-color: #000;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 1;
+}
+.barra-navegacion .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.barra-navegacion .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff
+}
+.barra-navegacion .logo a span{
+    color:crimson;
+}
+.barra-navegacion .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.barra-navegacion .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.barra-navegacion .menu li a:hover{
+    color:crimson;
+}
+
+/* estilos de la seccion de inicio */
+
+.inicio{
+    display: flex;
+    background: url("/img/banner.gif") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.inicio .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.inicio .inicio-contenido .texto-1{
+    font-size: 27px;
+}
+
+.inicio .inicio-contenido .texto-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.inicio .inicio-contenido .texto-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.inicio .inicio-contenido .texto-3 span{
+    color: crimson;
+    font-weight: 700;
+}
+
+.deslizar {
+    position: relative;
+    width: fit-content;
+}
+.deslizar::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    animation: swipe 1.5s ease-out 1s forwards;
+}
+.deslizar div{
+    opacity: 0;
+    animation: fade 0.0001s ease-out 1.75s forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+   }
+    to {
+        opacity: 1;
+   }
+}
+@keyframes swipe {
+    0% {
+        right: 100%;
+        left: 0;
+        width: 0%;
+   }
+    50% {
+        right: 0;
+        left: 0;
+        width: 100%;
+   }
+    100% {
+        right: 0;
+        left: 100%;
+        width: 0%;
+   }
+}
+
+.contenido{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 4%;
+}
+.contenido h1{
+    font-family: 'Poppins', serif;
+    font-size: 48px;
+    text-align: center;
+}
+section{
+    padding-top: 10%;
+}
+
+.wrapper{
+    width: 40%;
+    min-width: 590px;
+    position: relative;
+    display:block;
+    width:fit-content;
+    margin:auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.container{
+    width: 100%;
+    padding: 30px 30px 50px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.2);
+} 
+
+.container *{
+    font-family: "Poppins",sans-serif;
+    color: black;
+    font-weight: 500;
+}
+.container h2{
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+/*Barras de habilidad */
+.detalles{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.barra{
+    position: relative;
+
+    border: 2px solid #dc143c;
+
+    border-radius: 20px;
+
+}
+.barra div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #dc143c;
+}
+
+.barra:not(:last-child){
+    margin-bottom: 30px;
+}
+
+/*Relleno de las barras */
+
+#barra-html{
+    animation: llenar-html 2s forwards;
+}
+@keyframes llenar-html{
+    100%{
+        width: 90%;
+    }
+}
+
+#barra-css{
+    animation: llenar-css 2s forwards;
+}
+@keyframes llenar-css{
+    100%{
+        width: 70%;
+    }
+}
+
+#barra-js{
+    animation: llenar-js 2s forwards;
+}
+@keyframes llenar-js{
+    100%{
+        width: 50%;
+    }
+}
+
+#barra-vb{
+    animation: llenar-vb 2s forwards;
+}
+@keyframes llenar-vb{
+    100%{
+        width: 75%;
+    }
+}
+
+#barra-java{
+    animation: llenar-java 2s forwards;
+}
+@keyframes llenar-java{
+    100%{
+        width: 100%;
+    }
+}
+
+#barra-kotlin{
+    animation: llenar-kotlin 2s forwards;
+}
+@keyframes llenar-kotlin{
+    100%{
+        width: 90%;
+    }
+}
