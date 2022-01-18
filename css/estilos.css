@@ -235,7 +235,7 @@ section{
 }
 @keyframes llenar-js{
     100%{
-        width: 50%;
+        width: 50%;  
     }
 }
 
@@ -264,4 +264,15 @@ section{
     100%{
         width: 90%;
     }
+}
+
+.letra-fondo{
+    font-family: 'Poppins', serif;
+    font-size: 120px;
+    position: absolute;
+    left:50%;
+	transform:translate(-50%, -53%);
+    color: #dcdcdc;
+    z-index: -1;
+    
 }
